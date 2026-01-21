@@ -59,7 +59,7 @@ function handleBlur() {
 </script>
 
 <template>
-  <div class="flex items-center gap-3">
+  <div class="flex items-center gap-4">
     <img
       v-if="photo"
       src="/img.png"
@@ -80,11 +80,11 @@ function handleBlur() {
       >
         {{ label }}
       </label>
-      <div class="relative flex items-center gap-2">
+      <div class="relative flex items-center gap-3">
         <div class="relative inline-block min-w-18">
           <span
             ref="mirrorRef"
-            class="invisible inter-500 border absolute whitespace-pre px-2 py-[11px] text-lg"
+            class="invisible inter-500 border absolute whitespace-pre px-2 py-[11px] text-[18px] leading-none"
           >
             {{ maskedValue || "0" }}
           </span>
@@ -93,7 +93,7 @@ function handleBlur() {
             id="number-input"
             type="text"
             inputmode="numeric"
-            class="text-(--c-dark) min-w-18 px-2 py-[11px] text-lg inter-500 border border-gray-300 transition-colors rounded outline-none focus-within:border-(--c-primary-light) caret-(--c-primary-light)"
+            class="text-(--c-dark) min-w-18 px-2 py-[11px] h-[44px] text-[18px] leading-none inter-500 border border-gray-300 transition-colors rounded outline-none focus-within:border-(--c-primary-light) caret-(--c-primary-light)"
             placeholder="0"
             @focus="handleFocus"
             @blur="handleBlur"
